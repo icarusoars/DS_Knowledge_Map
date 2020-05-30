@@ -3,8 +3,8 @@
   display: block;
   position: absolute;
   width: 97%;
-  height: 93%;
-  top: 6%;    /* 6.5% from the top to account for menu bar 5% height  */
+  height: 91%;
+  top: 6%;    /* 6% from the top to account for menu bar 5% height  */
   left: 1.5%;
 }
 
