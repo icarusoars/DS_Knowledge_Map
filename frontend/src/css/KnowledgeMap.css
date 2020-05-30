@@ -1,0 +1,27 @@
+#KnowledgeMapInfo {
+  /* background-color: green; */
+  /* border: 3px solid orange; */
+}
+
+#KnowledgeMapInfoInside {
+  display: block;
+  position: relative;
+  width: 95%;
+  height: 90%;
+  margin: 1em auto;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px 5px;
+
+  overflow-y: scroll;
+}
+#KnowledgeMapInfoInside::-webkit-scrollbar {
+    width: 0.7em;
+    background: transparent;
+  }
+#KnowledgeMapInfoInside::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 30px;
+}

@@ -7,7 +7,7 @@ import {
   Switch
 } from "react-router-dom";
 
-import "./index.css";
+import "./css/index.css";
 
 import Menu from "./shared_components/Menu";
 import Motivation from "./motivation/Motivation"

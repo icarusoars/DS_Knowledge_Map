@@ -3,6 +3,8 @@ import { Menu } from "antd";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
 
+import '../css/Menu.css'
+
 class Menubar extends React.Component {
   state = {
     current: "mail",
