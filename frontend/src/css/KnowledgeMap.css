@@ -1,3 +1,21 @@
+/* Container that contains both D3 diagram and information panel */
+#KnowledgeMap {
+  display: block;
+  position: absolute;
+  width: 97%;
+  height: 93%;
+  top: 6%;    /* 6.5% from the top to account for menu bar 5% height  */
+  left: 1.5%;
+}
+
+/* left side of screen, display D3 circle packing diagram */
+#KnowledgeMapD3 {
+  display: block;
+  background-color: orange;
+}
+
+
+/* Right side of screen, display information */
 #KnowledgeMapInfo {
   /* background-color: green; */
   /* border: 3px solid orange; */
@@ -5,11 +23,11 @@
 
 #KnowledgeMapInfoInside {
   display: block;
-  position: relative;
-  width: 95%;
-  height: 90%;
-  margin: 1em auto;
-  padding: 1.5em 1.5em 1.5em 1.5em;
+  position: absolute;
+  width: 97.5%;
+  height: 100%;
+  left: 2.5%;
+  padding: 1em;
 
   border-radius: 10px;
   background-color: white;

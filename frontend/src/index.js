@@ -21,6 +21,8 @@ ReactDOM.render(
     
     <Router>
       <Menu />
+      
+      {/* Use react-router to render the correct page component */}
       <Switch>
         <Route exact path="/">
           <KnowledgeMap />
@@ -32,6 +34,7 @@ ReactDOM.render(
           <About />
         </Route>
       </Switch>
+      
     </Router>
 
   </React.StrictMode>,

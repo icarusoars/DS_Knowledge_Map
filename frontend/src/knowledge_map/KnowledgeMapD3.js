@@ -24,9 +24,6 @@ class KnowledgeMapD3 extends React.Component {
   render() {
     return (
       <svg width="100%" height="100%"
-            style={{ 
-                    display: "block",
-                    margin: "auto" }}
            ref = {this.svgRef}>
       </svg>
     );

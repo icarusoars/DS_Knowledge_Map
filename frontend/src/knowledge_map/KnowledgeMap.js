@@ -9,10 +9,11 @@ class KnowledgeMap extends React.Component {
 
   render() {
     return (
-      <div style = {{ height: "100%" }}>
+      <div id = 'KnowledgeMap'>
         <Row style = {{ height: "100%" }}>
 
-          <Col span={16} style={{ height: '100%'}}>
+          <Col span={16} style={{ height: '100%'}}
+               id = 'KnowledgeMapD3'>
             <KnowledgeMapD3 />
           </Col>
           <Col span={8} style={{ 

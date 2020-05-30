@@ -28,7 +28,7 @@ body {
   /* background-color: purple; */
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: relative;
   margin: 0px;
   overflow: hidden;
   top: 0px;
