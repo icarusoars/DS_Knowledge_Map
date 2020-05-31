@@ -12,7 +12,7 @@
 }
 
 .node--leaf:hover {
-  stroke: #fcba03;
+  stroke: #000;
   stroke-width: 1.5px;
 }
 
@@ -23,7 +23,10 @@
   overflow-wrap: break-word;
 }
 
-.label,
+/* .label,
 .node--root {
+  pointer-events: none;
+} */
+.label {
   pointer-events: none;
 }

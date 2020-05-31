@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import "../css/KnowledgeMap.css";
 
@@ -14,12 +15,19 @@ class KnowledgeMapInfo extends React.Component {
           <li>Essential Concepts / Questions to be Answered</li>
           <li>Strengths and Weaknesses</li>
           <li>Analogies</li>
-          <li>Application</li>
+          <li>Application / Example Usecases</li>
           <li>Resources to learn from</li>
         </ul>
+        <p>The following information will be displayed:</p>
+        <h3>{this.props.currentCircleId}</h3>
       </div>
     );
   }
 }
+
+
+KnowledgeMapInfo.propTypes = {
+  currentCircleId: PropTypes.string,
+};
 
 export default KnowledgeMapInfo;

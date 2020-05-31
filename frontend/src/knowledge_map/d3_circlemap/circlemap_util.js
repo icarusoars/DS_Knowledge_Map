@@ -11,7 +11,7 @@ const BACKGROUNDCOLOR = "#f2f2f2"
 // referenced this article to integrate d3 with react:
 // https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71
 
-function createCircleMapUtil(svg_node) {
+function createCircleMapUtil(svg_node, onCircleClick) {
 
   // select svg container using React reference
   var svg = d3.select(svg_node);
@@ -62,12 +62,26 @@ function createCircleMapUtil(svg_node) {
       .data(nodes)
       .enter().append("circle")
         .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+        // add an ID attribute for circles for API calls
         .style("fill", function(d) { return d.children ? color(d.depth) : null; })
         .on("click", function(d) {
+          
+          var prezoomfocus = focus;
           if (focus !== d){
-            zoom(d);
+            zoom(d);                      //zoom function changes global variable focus to d that is clicked
             d3.event.stopPropagation();
-          } 
+          }
+
+          // eventHandler for when circle is clicked:
+          if (d['depth'] == 0){
+            onCircleClick('Data_Science');
+          // if click on same circle twice, return to root Data_Science circle
+          } else if (prezoomfocus == d) {
+            onCircleClick('Data_Science');
+          } else {
+            onCircleClick(d['data']['name']);
+          }
+
         });
 
     // label circle with text for each descendant
