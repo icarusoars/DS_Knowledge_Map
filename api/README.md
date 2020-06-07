@@ -16,3 +16,11 @@ https://medium.com/@preslavrachev/designing-well-structured-rest-apis-with-flask
 https://dev.to/mrprofessor/rendering-markdown-from-flask-1l41
 
 https://www.youtube.com/watch?v=-g3ubRHpOEs
+
+# Testing Locally
+```shell
+python3 -m venv {virtual env name}
+source {virtual env name}/bin/activate
+pip install -r requirements.txt
+python index.py
+```
