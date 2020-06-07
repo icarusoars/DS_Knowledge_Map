@@ -7,6 +7,7 @@ Flask-restplus is a great package to quickly build out a RESTful API. It has sev
 - automatically documents all your endpoints with Swagger API
 - has namespaces to organize endpoints. Endpoints are grouped by namespace in documentation automatically.
 - uses the idea of Resources to organize CRUD operations ['GET','POST','PUT', 'DELETE'] as functions within a class. One no longer needs to use if statements to check for http method
+- can easily check the validity of arguments passed in request
 
 This article was very helpful to quickstart flask-restplus development: \
 https://medium.com/@preslavrachev/designing-well-structured-rest-apis-with-flask-restplus-part-1-7e96f2da8850
