@@ -26,3 +26,6 @@ Backend is designed using these technolgoies:
 # Deployment
 Both the frontend and backend are deployed using **vercel now**. The `now.json` file in the root folder specifies both how 
 the frontend and backend are deployed.
+The frontend uses commands specified in `/client/package.json` to build the React app into `/client/build`. Now then deploys this static
+folder.
+The backend uses Now's python builder to build up a flask WSGI server specified in `/api/index.py`.
