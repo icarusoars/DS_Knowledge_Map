@@ -65,7 +65,7 @@ function createCircleMapUtil(svg_node, onCircleClick) {
         // add an ID attribute for circles for API calls
         .style("fill", function(d) { return d.children ? color(d.depth) : null; })
         .on("click", function(d) {
-          
+
           var prezoomfocus = focus;
           if (focus !== d){
             zoom(d);                      //zoom function changes global variable focus to d that is clicked
@@ -73,10 +73,10 @@ function createCircleMapUtil(svg_node, onCircleClick) {
           }
 
           // eventHandler for when circle is clicked:
-          if (d['depth'] == 0){
+          if (d['depth'] === 0){
             onCircleClick('Data_Science');
           // if click on same circle twice, return to root Data_Science circle
-          } else if (prezoomfocus == d) {
+          } else if (prezoomfocus === d) {
             onCircleClick('Data_Science');
           } else {
             onCircleClick(d['data']['name']);

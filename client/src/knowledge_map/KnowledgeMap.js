@@ -23,7 +23,7 @@ class KnowledgeMap extends React.Component {
   // event handler for circle clicks in D3 diagram
   // this is passed as a prop to KnowledgeMapD3
   handleCircleClick = (circleId) => {
-    this.setState(state => ({
+    this.setState(() => ({
       currentCircleId: circleId + '_Id'
     }));
   }
