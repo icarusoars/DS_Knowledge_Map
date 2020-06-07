@@ -20,6 +20,7 @@ Frontend is designed using these technologies:
 Backend is designed using these technolgoies:
 - flask
 - flask-restplus
+- swagger api
 - markdown
 
 # Deployment
