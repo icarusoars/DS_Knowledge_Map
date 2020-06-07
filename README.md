@@ -5,7 +5,7 @@ Website located here:
 The motivation for this product can be read on the website.
 
 This website is a mono-repo where both the frontend and backend are included.
-- frontend: `/frontend`
+- frontend: `/client`
 - backend: `/api`
 
 Click into `/frontend` or `/api` for more specific design considerations.
