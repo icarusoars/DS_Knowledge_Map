@@ -1,8 +1,5 @@
 import * as d3 from "d3";
 
-// read in knowledge map json. This JSON is not stored on backend for convenience.
-var circlemap = require('./circlemap.json')
-
 const MAXDEPTH = 3
 const BACKGROUNDCOLOR = "#f2f2f2"
 
@@ -11,7 +8,7 @@ const BACKGROUNDCOLOR = "#f2f2f2"
 // referenced this article to integrate d3 with react:
 // https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71
 
-function createCircleMapUtil(svg_node, onCircleClick) {
+function createCircleMapUtil(circlemap, svg_node, onCircleClick) {
 
   // select svg container using React reference
   var svg = d3.select(svg_node);

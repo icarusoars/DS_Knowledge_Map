@@ -6,40 +6,28 @@ import "./d3_circlemap/circlemap.css";
 
 import { createCircleMapUtil } from "./d3_circlemap/circlemap_util";
 
+import { getCircleMap } from "../api_calls/api_kmap";
+
 class KnowledgeMapD3 extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleCircleClick = this.handleCircleClick.bind(this);
-
     this.svgRef = React.createRef();
 
-    this.state = {
-      tempCount: 0
-    }
   }
 
   componentDidMount() {
     // draw the circle packing diagram onto svg after svg has mounted
     this.createCircleMap();
   }
-  // componentDidUpdate() {
-  //   this.createCircleMap();
-  // }
-
-  handleCircleClick() {
-    console.log("A circle was clicked")
-    this.setState((state) => ({
-      tempCount: state.tempCount + 1
-    }))
-    console.log(this.state.tempCount)
-  }
 
   // function to draw the circle packing diagram
+  // pass in json file for D3 to draw circles
   // pass in svg reference so D3 javascript code knows which SVG to draw onto
   // pass in circleClick event handler to handle circle clicks
-  createCircleMap = () => {
-    createCircleMapUtil(this.svgRef.current, this.props.onCircleClick);
+  createCircleMap = async () => {
+    const circleMapJSON = await getCircleMap();
+    createCircleMapUtil(circleMapJSON, this.svgRef.current, this.props.onCircleClick);
   }
 
   // referenced this article to integrate d3 with react:

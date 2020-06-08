@@ -3,15 +3,17 @@
   display: block;
   position: absolute;
   width: 97%;
-  height: 91%;
-  top: 6%;    /* 6% from the top to account for menu bar 5% height  */
+  height: 88%;
+  top: 8%;    /* 6% from the top to account for menu bar 5% height  */
   left: 1.5%;
 }
 
 /* left side of screen, display D3 circle packing diagram */
 #KnowledgeMapD3 {
-  display: block;
-  background-color: orange;
+  /* display: block;
+  height: 100%;
+  background-color: orange; */
+  overflow: hidden;
 }
 
 
