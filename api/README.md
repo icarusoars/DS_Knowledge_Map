@@ -25,3 +25,8 @@ source {virtual env name}/bin/activate
 pip install -r requirements.txt
 python index.py
 ```
+
+# Deployment
+This folder contains a sub-folder called `kmap` that includes all static markdown files containing knowledge map information.\
+`kmap` is deployed statically to vercel now. I consulted this comment to deploy this sub-folder statically:\
+https://github.com/vercel/vercel/issues/622#issuecomment-454482804
