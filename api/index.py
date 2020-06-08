@@ -1,6 +1,5 @@
 from flask import Flask, Response
 from flask_restplus import Resource, Api, fields
-import json
 import markdown
 import requests
 
@@ -29,7 +28,7 @@ def hello_world():
 class KmapStructure(Resource):
     def get(self):
         response = requests.get(PROD_URL + "kmap_static/circlemap.json")
-        return json.loads(response.text)
+        return response.json()
 
 
 @ns_kmap.route('/<path:resource_path>')
