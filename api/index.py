@@ -37,9 +37,11 @@ class KmapNodeInfo(Resource):
         resource_path = PROD_URL + 'kmap_static/' + resource_path
 
         response = requests.get(resource_path)
+        print(response.text)
         html_string = markdown.markdown(
             response.text, extensions=["fenced_code"]
         )
+        # print(html_string)
 
         return html_string
 
