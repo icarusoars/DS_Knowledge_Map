@@ -1,126 +1,108 @@
 {
+  "md_file_path": "data_science/data_science.md",
   "name": "Data Science",
   "children": [
     {
-      "name": "Data Visualizations",
+      "md_file_path": "data_science/statistics/statistics.md",
+      "name": "statistics",
+      "size": 5
+    },
+    {
+      "md_file_path": "data_science/machine_learning/machine_learning.md",
+      "name": "machine_learning",
+      "size": 5
+    },
+    {
+      "md_file_path": "data_science/data_manipulation/data_manipulation.md",
+      "name": "data_manipulation",
+      "size": 5
+    },
+    {
+      "md_file_path": "data_science/data_visualization/data_visualization.md",
+      "name": "data_visualization",
       "children": [
         {
-          "name": "Technologies Used",
+          "md_file_path": "data_science/data_visualization/technologies/technologies.md",
+          "name": "technologies",
           "children": [
-            { "name": "Plotly", "size": 5 },
-            { "name": "D3.js", "size": 5 },
-            { "name": "matplotlib", "size": 5 },
-            { "name": "seaborn", "size": 5 },
-            { "name": "superset", "size": 5 },
-            { "name": "Tableau", "size": 5 },
-            { "name": "Bokeh", "size": 5 }
+            {
+              "md_file_path": "data_science/data_visualization/technologies/bokeh/bokeh.md",
+              "name": "bokeh",
+              "size": 5
+            },
+            {
+              "md_file_path": "data_science/data_visualization/technologies/tableau/tableau.md",
+              "name": "tableau",
+              "size": 5
+            },
+            {
+              "md_file_path": "data_science/data_visualization/technologies/seaborn/seaborn.md",
+              "name": "seaborn",
+              "size": 5
+            },
+            {
+              "md_file_path": "data_science/data_visualization/technologies/plotly/plotly.md",
+              "name": "plotly",
+              "size": 5
+            },
+            {
+              "md_file_path": "data_science/data_visualization/technologies/d3/d3.md",
+              "name": "d3",
+              "size": 5
+            },
+            {
+              "md_file_path": "data_science/data_visualization/technologies/matplotlib/matplotlib.md",
+              "name": "matplotlib",
+              "size": 5
+            },
+            {
+              "md_file_path": "data_science/data_visualization/technologies/superset/superset.md",
+              "name": "superset",
+              "size": 5
+            }
           ]
         },
         {
-          "name": "Visualization Types",
-          "children": [
-            { "name": "Plotly", "size": 5 },
-            { "name": "D3.js", "size": 5 },
-            { "name": "matplotlib", "size": 5 },
-            { "name": "seaborn", "size": 5 },
-            { "name": "superset", "size": 5 },
-            { "name": "Tableau", "size": 5 },
-            { "name": "Bokeh", "size": 5 }
-          ]
+          "md_file_path": "data_science/data_visualization/visualization_types/visualization_types.md",
+          "name": "visualization_types",
+          "size": 5
         }
       ]
     },
     {
-      "name": "Data Manipulation",
-      "children": [
-        {
-          "name": "Essential Tools",
-          "children": [
-            { "name": "Pandas", "size": 8 },
-            { "name": "numpy", "size": 8 },
-            { "name": "SQL", "size": 8 },
-            { "name": "seaborn", "size": 8 },
-            { "name": "superset", "size": 8 },
-            { "name": "Tableau", "size": 8 },
-            { "name": "Bokeh", "size": 8 }
-          ]
-        },
-        {
-          "name": "Data Preprocessing",
-          "children": [
-            { "name": "Missing Data Imputation", "size": 8 },
-            { "name": "Dealing with Categorical Data", "size": 8 },
-            { "name": "SQL", "size": 8 },
-            { "name": "seaborn", "size": 8 },
-            { "name": "superset", "size": 8 },
-            { "name": "Tableau", "size": 8 },
-            { "name": "Bokeh", "size": 8 }
-          ]
-        }
-      ]
+      "md_file_path": "data_science/math/math.md",
+      "name": "math",
+      "size": 5
     },
     {
-      "name": "Feature Engineering",
-      "children": [
-        { "name": "Missing Data Imputation", "size": 8 },
-        { "name": "Dealing with Categorical Data", "size": 8 }
-      ]
+      "md_file_path": "data_science/big_data/big_data.md",
+      "name": "big_data",
+      "size": 5
     },
     {
-      "name": "Math",
-      "children": [
-        { "name": "Calculus", "size": 8 },
-        { "name": "Linear Algebra", "size": 8 },
-        { "name": "Probability", "size": 8 }
-      ]
+      "md_file_path": "data_science/experimental_design/experimental_design.md",
+      "name": "experimental_design",
+      "size": 5
     },
     {
-      "name": "Statistics",
-      "children": [
-        { "name": "Linear Regression", "size": 8 },
-        { "name": "Bayesian Analysis", "size": 8 },
-        { "name": "Stochastic Systems", "size": 8 }
-      ]
+      "md_file_path": "data_science/deployment/deployment.md",
+      "name": "deployment",
+      "size": 5
     },
     {
-      "name": "Machine Learning",
-      "children": [
-        { "name": "Linear Regression", "size": 8 },
-        { "name": "Bayesian Analysis", "size": 8 },
-        { "name": "Stochastic Systems", "size": 8 }
-      ]
+      "md_file_path": "data_science/feature_engineering/feature_engineering.md",
+      "name": "feature_engineering",
+      "size": 5
     },
     {
-      "name": "Big Data",
-      "children": [
-        { "name": "Linear Regression", "size": 8 },
-        { "name": "Bayesian Analysis", "size": 8 },
-        { "name": "Stochastic Systems", "size": 8 }
-      ]
+      "md_file_path": "data_science/product_sense/product_sense.md",
+      "name": "product_sense",
+      "size": 5
     },
     {
-      "name": "Experimental Design",
-      "children": [
-        { "name": "A/B Testing", "size": 8 },
-        { "name": "Bayesian Analysis", "size": 8 },
-        { "name": "Stochastic Systems", "size": 8 }
-      ]
-    },
-    {
-      "name": "Product Sense",
-      "children": [
-        { "name": "A/B Testing", "size": 8 },
-        { "name": "Bayesian Analysis", "size": 8 },
-        { "name": "Stochastic Systems", "size": 8 }
-      ]
-    },
-    {
-      "name": "Presentation & Communication",
-      "children": [
-        { "name": "Frontend Technologies", "size": 8 },
-        { "name": "Story-telling", "size": 8 },
-        { "name": "Making a Strong Argument", "size": 8 }
-      ]
+      "md_file_path": "data_science/presentation/presentation.md",
+      "name": "presentation",
+      "size": 5
     }
   ]
 }
