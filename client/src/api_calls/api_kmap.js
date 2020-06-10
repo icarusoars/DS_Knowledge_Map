@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const instance = axios.create({
-  baseURL: "https://ds-knowledge-map.now.sh/",
+  baseURL: "https://ds-knowledge-map.now.sh",
 });
 
 export const getCircleMap = async () => {
@@ -16,7 +16,8 @@ export const getCircleMap = async () => {
 
 export const getCircleInfo = async (md_path) => {
   try{
-    return await instance.get("/kmap_static/" + md_path);
+    const res = await instance.get("/kmap_static/" + md_path);
+    return res.data;
   } catch (error) {
     console.log(error)
   }

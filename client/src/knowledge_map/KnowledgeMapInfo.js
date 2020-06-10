@@ -1,9 +1,40 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import Markdown from 'react-markdown';
 
 import "../css/KnowledgeMap.css";
 
+import { getCircleInfo } from "../api_calls/api_kmap";
+
+
+
 class KnowledgeMapInfo extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      markdown: "",
+    };
+
+  }
+
+  async componentDidMount() {
+    await this.getMarkdown();
+  }
+
+  async componentDidUpdate(prevProps) {
+    if (prevProps.currentCircleInfoPath !== this.props.currentCircleInfoPath) {
+      await this.getMarkdown();
+    }
+  }
+
+  getMarkdown = async () => {
+    const circleMd = await getCircleInfo(this.props.currentCircleInfoPath);
+    this.setState(() => ({
+      markdown: circleMd
+    }));
+  }
+
   render() {
     return (
       <div id = 'KnowledgeMapInfoInside'>
@@ -19,7 +50,8 @@ class KnowledgeMapInfo extends React.Component {
           <li>Resources to learn from</li>
         </ul>
         <p>The following information will be displayed:</p>
-        <h3>{this.props.currentCircleId}</h3>
+        <h3>{this.props.currentCircleInfoPath}</h3>
+        <Markdown source={this.state.markdown} />
       </div>
     );
   }
@@ -27,7 +59,7 @@ class KnowledgeMapInfo extends React.Component {
 
 
 KnowledgeMapInfo.propTypes = {
-  currentCircleId: PropTypes.string,
+  currentCircleInfoPath: PropTypes.string,
 };
 
 export default KnowledgeMapInfo;

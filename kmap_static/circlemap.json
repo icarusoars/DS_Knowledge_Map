@@ -4,22 +4,28 @@
   "children": [
     {
       "md_file_path": "data_science/statistics/statistics.md",
-      "name": "statistics",
-      "size": 5
+      "name": "Statistics",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/machine_learning/machine_learning.md",
-      "name": "machine_learning",
-      "size": 5
+      "name": "Machine Learning",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/data_manipulation/data_manipulation.md",
-      "name": "data_manipulation",
-      "size": 5
+      "name": "Data Manipulation",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/data_visualization/data_visualization.md",
-      "name": "data_visualization",
+      "name": "Data Visualization",
       "children": [
         {
           "md_file_path": "data_science/data_visualization/technologies/technologies.md",
@@ -71,38 +77,52 @@
     },
     {
       "md_file_path": "data_science/math/math.md",
-      "name": "math",
-      "size": 5
+      "name": "Math",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/big_data/big_data.md",
-      "name": "big_data",
-      "size": 5
+      "name": "Big Data",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/experimental_design/experimental_design.md",
-      "name": "experimental_design",
-      "size": 5
+      "name": "Experimental Design",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/deployment/deployment.md",
-      "name": "deployment",
-      "size": 5
+      "name": "Deployment",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/feature_engineering/feature_engineering.md",
-      "name": "feature_engineering",
-      "size": 5
+      "name": "Feature Engineering",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/product_sense/product_sense.md",
-      "name": "product_sense",
-      "size": 5
+      "name": "Product Sense",
+      "size": [
+        "5"
+      ]
     },
     {
       "md_file_path": "data_science/presentation/presentation.md",
-      "name": "presentation",
-      "size": 5
+      "name": "Presentation",
+      "size": [
+        "5"
+      ]
     }
   ]
 }

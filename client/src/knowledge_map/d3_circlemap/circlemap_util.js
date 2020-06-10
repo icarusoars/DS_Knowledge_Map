@@ -13,7 +13,7 @@ function createCircleMapUtil(circlemap, svg_node, onCircleClick) {
   // select svg container using React reference
   var svg = d3.select(svg_node);
   var margin = 20;
-  var svg_width = svg.node().getBoundingClientRect()['width']
+  var svg_width = svg.node().getBoundingClientRect()['width'];
   var svg_height = svg.node().getBoundingClientRect()['height'];
   var diameter = (svg_height < svg_width) ? svg_height : svg_width;
   diameter = diameter - 40;
@@ -71,12 +71,12 @@ function createCircleMapUtil(circlemap, svg_node, onCircleClick) {
 
           // eventHandler for when circle is clicked:
           if (d['depth'] === 0){
-            onCircleClick('Data_Science');
+            onCircleClick(circlemap['md_file_path']);
           // if click on same circle twice, return to root Data_Science circle
           } else if (prezoomfocus === d) {
-            onCircleClick('Data_Science');
+            onCircleClick(circlemap['md_file_path']);
           } else {
-            onCircleClick(d['data']['name']);
+            onCircleClick(d['data']['md_file_path']);
           }
 
         });
@@ -125,10 +125,6 @@ function createCircleMapUtil(circlemap, svg_node, onCircleClick) {
       node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
       circle.attr("r", function(d) { return d.r * k; });
     }
-  // }).catch(function(error) {
-  //   console.log("ERROR happened")
-  //   console.log(error)
-  // })
 
 }
 

@@ -1,11 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-
 import "./d3_circlemap/circlemap.css";
 
 import { createCircleMapUtil } from "./d3_circlemap/circlemap_util";
-
 import { getCircleMap } from "../api_calls/api_kmap";
 
 class KnowledgeMapD3 extends React.Component {

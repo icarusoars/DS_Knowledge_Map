@@ -16,15 +16,15 @@ class KnowledgeMap extends React.Component {
     // this article details how communication between siblings should be done:
     // https://app.pluralsight.com/guides/react-communicating-between-components
     this.state = {
-      currentCircleId: "Data_Science_Id",
+      currentCircleInfoPath: "data_science/data_science.md",
     };
   }
 
   // event handler for circle clicks in D3 diagram
   // this is passed as a prop to KnowledgeMapD3
-  handleCircleClick = (circleId) => {
+  handleCircleClick = (circleInfoPath) => {
     this.setState(() => ({
-      currentCircleId: circleId + '_Id'
+      currentCircleInfoPath: circleInfoPath
     }));
   }
 
@@ -42,7 +42,7 @@ class KnowledgeMap extends React.Component {
             }}
             id="KnowledgeMapInfo"
           >
-            <KnowledgeMapInfo currentCircleId = {this.state.currentCircleId} />
+            <KnowledgeMapInfo currentCircleInfoPath = {this.state.currentCircleInfoPath} />
           </Col>
         </Row>
       </div>
