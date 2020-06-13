@@ -3,16 +3,16 @@ import { Menu } from "antd";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
 
-import '../css/Menu.css'
+import '../css/menu.scss'
 
 class Menubar extends React.Component {
   state = {
-    current: "mail",
+    selectedTab: "knowledge_map",
   };
 
   handleClick = (e) => {
     this.setState({
-      current: e.key,
+      selectedTab: e.key,
     });
   };
 
@@ -20,20 +20,20 @@ class Menubar extends React.Component {
     return (
       <Menu
         onClick={this.handleClick}
-        selectedKeys={[this.state.current]}
+        selectedKeys={[this.state.selectedTab]}
         mode="horizontal"
       >
-        <Menu.Item key="knowledge_map">
+        <Menu.Item key="knowledge_map" >
           <Link to="/">
             Knowledge Map
           </Link>
         </Menu.Item>
-        <Menu.Item key="motivation">
+        <Menu.Item key="motivation" >
           <Link to="/motivation">
             Motivation
           </Link>
         </Menu.Item>
-        <Menu.Item key="about">
+        <Menu.Item key="about" >
           <Link to="/about">
             About
           </Link>

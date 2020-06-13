@@ -3,7 +3,7 @@ import { Row, Col } from "antd";
 import KnowledgeMapD3 from "./KnowledgeMapD3";
 import KnowledgeMapInfo from "./KnowledgeMapInfo";
 
-import "../css/KnowledgeMap.css";
+import "../css/KnowledgeMap.scss";
 
 class KnowledgeMap extends React.Component {
   constructor(props) {

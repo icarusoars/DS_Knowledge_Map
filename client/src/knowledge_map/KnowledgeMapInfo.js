@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import Markdown from 'react-markdown';
+import Markdown from 'react-markdown/with-html';
 
-import "../css/KnowledgeMap.css";
+import "../css/KnowledgeMap.scss";
 
 import { getCircleInfo } from "../api_calls/api_kmap";
 
@@ -15,7 +15,6 @@ class KnowledgeMapInfo extends React.Component {
     this.state = {
       markdown: "",
     };
-
   }
 
   async componentDidMount() {
@@ -38,20 +37,9 @@ class KnowledgeMapInfo extends React.Component {
   render() {
     return (
       <div id = 'KnowledgeMapInfoInside'>
-        <h1>This is where information will be</h1>
-        <p>each node in the circle map will have its description here</p>
-        <ul>
-          <li>Overview</li>
-          <li>Why is it important</li>
-          <li>Essential Concepts / Questions to be Answered</li>
-          <li>Strengths and Weaknesses</li>
-          <li>Analogies</li>
-          <li>Application / Example Usecases</li>
-          <li>Resources to learn from</li>
-        </ul>
-        <p>The following information will be displayed:</p>
         <h3>{this.props.currentCircleInfoPath}</h3>
-        <Markdown source={this.state.markdown} />
+        <Markdown source={this.state.markdown} 
+        escapeHtml={false}/>
       </div>
     );
   }

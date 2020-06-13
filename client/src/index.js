@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
-import "./css/index.css";
+import "./css/index.scss";
 
 import Menu from "./shared_components/Menu";
 import Motivation from "./motivation/Motivation";

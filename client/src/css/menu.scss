@@ -1,0 +1,42 @@
+.ant-menu {
+  background-color: inherit;
+  color: inherit;
+  display: flex;
+  position: absolute;
+
+  width: 97%;
+  height: 5%;
+  min-height: 50px;
+  top: 0.5%;
+  left: 1.5%;
+
+  z-index: 100;
+  padding: 0;
+  border-bottom: none;
+
+  .ant-menu-item {
+    top: 0%;
+    height: 100%;
+
+    font-weight: 700;
+    a {
+      color: white;
+    }
+  }
+
+  .ant-menu-item-selected {
+    color: rgba(134, 194, 50, 0.9);
+    border-bottom: 2px solid rgba(134, 194, 50, 0.9);
+    a {
+        color: inherit;
+    }
+  }
+
+  .ant-menu-item:hover {
+    color: rgba(134, 194, 50, 0.9);
+    border-bottom: 2px solid rgba(134, 194, 50, 0.9);
+    a {
+        color: inherit;
+    }
+  }
+}
