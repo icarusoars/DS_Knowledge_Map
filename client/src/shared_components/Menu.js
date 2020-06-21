@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import '../css/menu.scss'
 
 class Menubar extends React.Component {
+
   state = {
     selectedTab: "knowledge_map",
   };

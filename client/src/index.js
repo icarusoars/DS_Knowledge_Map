@@ -1,22 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import "./css/index.scss";
 
 import Menu from "./shared_components/Menu";
-import Motivation from "./motivation/Motivation";
 import KnowledgeMap from "./knowledge_map/KnowledgeMap";
+import Motivation from "./motivation/Motivation";
 import About from "./about/About";
 
 import * as serviceWorker from "./serviceWorker";
+
+
 
 ReactDOM.render(
   <Router>
     <Menu />
 
-    {/* Use react-router to render the correct page component */}
     <Switch>
       <Route exact path="/">
         <KnowledgeMap />
