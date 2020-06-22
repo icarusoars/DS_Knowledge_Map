@@ -1,4 +1,5 @@
 import React from "react";
+import Markdown from 'react-markdown/with-html';
 
 import { getMotivationInfo } from "../api_calls/api_kmap";
 
