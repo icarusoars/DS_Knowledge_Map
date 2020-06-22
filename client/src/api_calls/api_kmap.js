@@ -24,3 +24,12 @@ export const getCircleInfo = async (md_path) => {
     console.log(error)
   }
 };
+
+export const getMotivationInfo = async () => {
+  try{
+    const res = await instance.get("/kmap_static/motivation.md");
+    return res.data;
+  } catch (error) {
+    console.log(error)
+  }
+};
