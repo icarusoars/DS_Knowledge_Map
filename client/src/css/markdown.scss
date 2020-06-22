@@ -1,4 +1,55 @@
-
 // code {
 //   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 // }
+
+span {
+  font-size: 2em;
+}
+
+$white: hsl(50, 5, 97);
+blockquote {
+  position: relative;
+  font-family: 'Sanchez', serif;
+  font-size: 1.2em;
+  line-height: 1.5em;;
+
+  border-left: 5px solid #ccc;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  
+  footer {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.6em;
+    font-weight: 700;
+    color: darken($white, 15%);
+    float: right;
+    
+    &:before {
+      content: '\2015';  
+    }
+  }
+  &:after {
+      content: '\201D';
+      position: absolute;
+      top: 0.28em;
+      right: 0;
+      font-size: 6em;
+      font-style: italic;
+      color: darken($white, 7%);
+      z-index: -1;
+   }
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
