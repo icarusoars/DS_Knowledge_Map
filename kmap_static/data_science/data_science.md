@@ -2,7 +2,9 @@
 name: Data Science
 ---
 
-<span>Hi!</span> Thanks for visiting this website. This website is here to visualize the many different facets of Data Science, a term that many deem beautiful yet vague at the same time.
+<iframe src="https://giphy.com/embed/Wj7lNjMNDxSmc" width="480" height="349" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+<span>Hi!</span> Thanks for visiting this website. This website is here to visualize the many different facets of Data Science, a term that many deem beautiful yet vague at the same time. Data Science is so vast, that often times the trickiest part of learning Data Science is figuring out how to begin or what to put into your Data Science toolbox.
 
 Hopefully with this website as a resource, you may be more intentional in learning Data Science. It wants to help you:
 - figure out what to learn
@@ -10,17 +12,27 @@ Hopefully with this website as a resource, you may be more intentional in learni
 - understand the relation between knowledge areas
 - choose several resources out of the sea of resources to learn
 
-This website advocates a method of learning called **metalearning** or **building a knowledge map**. For more information on why this type of learning is beneficial, go to the **Motivation** page.
+This website advocates a method of learning called **metalearning** or **building a knowledge map**. For more information on what this concept is, go to the **Motivation** page.
 
-## This knowledge map is by no means complete or a full representation of the world of data science because:
-- my knowledge is limited. This knowledge map will expand as I learn more about DS myself.
-- DS is constantly expanding.
+## Instructions
+To unravel the knowledge areas of Data Science, click on one of the sub-circles. Each sub-circle represents a knowledge area of Data Science. This process can be continued as you arrive into the domain of any knowledge area.
 
-## There exists several painpoints in learning data science at the moment:
-1. Data Science is vaguely defined. What is Data Science exactly? The question then follows how can I learn something before I even know what it is exactly?
-2. Tutorials, articles are a dime a dozen out there. For example, Towards Data Science publication on medium has exploded in the number of articles it publishes now. For a beginner in Data Science, it is almost paralyzing to know which articles to read. What resources should I invest my time in? this Knowledge Map provides you with the resources that can help you quickly learn each knowledge area. It is opinionated, but its hope is to help you learn quicker and better.
-3. What do I learn next? What should be the order I learn knowledge? Depending on what you want to be and what skills is required of one, one can learn differently and prioritize differently. For example, a ML engineer might prioritize depth in Machine Learning and Big Data whereas a Data Scientist might prioritize Statistics and experimental design. This knowledge map can help you better visualize the areas you should learn.
+When you click on a knowledge area, this information box here will display resources on learning this knowledge area.
 
+## Resource Sections
+Each resource will vary, but all of them will show several of these sections to help you understand this knowledge area quickly and in relation to others:
+- Overview
+- Importance
+- Essential Concepts / Guiding Questions
+- Strengths and Weaknesses
+- Analogies
+- Example usecases
+- Resources to Perform In-Depth Learning
 
-<img src = "https://images.unsplash.com/photo-1590483671126-5bc80a3399f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80" 
-width = "100%"/>
+## A Few More Words
+The aim of this resource is not to overwhelm you in any way. Data Science has evolved to encompass more and more knowledge areas because of how **purposefully vague** it is defined. The knowledge map shown aims to index as much Data Science knowledge as possible, but I don't believe the goal is to learn all the knowledge areas depicted. As always, choosing your trade-off between breadth and depth is one decision you'll have to make.
+
+I also do not claim that this knowledge map is exhaustive. Despite designing it to the best of my ability and having interviewed much more knowledgeable people than me, it is impossible to index a knowledge field entirely. However, hopefully it follows the 80-20 rule whereby it captures 80% of the most important pieces of knowledge with 20% of our attention.
+
+Without further ado, <span>Happy Learning!</span>
+

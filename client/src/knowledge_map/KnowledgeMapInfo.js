@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Markdown from 'react-markdown/with-html';
 
 import "../css/KnowledgeMap.scss";
+import "../css/markdown.scss";
 
 import { getCircleInfo } from "../api_calls/api_kmap";
 
