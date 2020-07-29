@@ -1,6 +1,25 @@
 https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
 
+# Frontend
 
+The frontend of this website mostly consists of a D3.js interactive visualization. Whenever nodes within it are clicked on, React state changes correspondingly and the corresponding markdown is rendered.
+
+## Localhost Development
+`yarn start` should run app in development mode. Upon save, changes are automatically reloaded.
+Expect website to be loaded at [http://localhost:3000](http://localhost:3000).
+
+## Deployment
+This website is deployed along with its frontend to vercel now. See root directory README for deployment instructions.
+
+## Features
+
+
+
+
+
+
+---
+# Create React App Readme Below
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
