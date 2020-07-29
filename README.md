@@ -8,7 +8,7 @@ The motivation for this product can be read on the website.
 This repo is a mono-repo where both the frontend and backend are included.
 - frontend: `/client`
 - backend: `/api`
-- static markdown files: '/kmap_static'
+- static markdown files: `/kmap_static`
 
 Click into `/client` or `/api` for more details.
 
