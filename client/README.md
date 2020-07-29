@@ -9,9 +9,16 @@ The frontend of this website mostly consists of a D3.js interactive visualizatio
 Expect website to be loaded at [http://localhost:3000](http://localhost:3000).
 
 ## Deployment
-This website is deployed along with its frontend to vercel now. See root directory README for deployment instructions.
+Frontend and backend are deployed at the same time with one command. See root directory README for deployment instructions.
 
 ## Features
+### 1. Interactive D3.js Circle Map
+Circle map adapted from example here: https://bl.ocks.org/fdlk/076469462d00ba39960f854df9acda56
+### 2. Rendering Markdown from Backend on Circle Node Click
+Whenever a specific circle is clicked on in the D3.js visualization, markdown information appears on the right. This is done by passing React event handlers into the D3.js svg object.
+Followed tutorial here: https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71
+### 3. Blur Nodes that are Descendants of Immediate Children
+To make the user experience better, I blur all nodes that are not the immediate children of the root node. This way the user can focus on all the information directly under the hierarchy of the root node. To do so, I use svg gaussian blur filter: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur
 
 
 
