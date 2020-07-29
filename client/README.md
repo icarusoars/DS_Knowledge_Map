@@ -1,6 +1,6 @@
 https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
 
-# Frontend
+# DS Knowledge Map Frontend
 
 The frontend of this website mostly consists of a D3.js interactive visualization. Whenever nodes within it are clicked on, React state changes correspondingly and the corresponding markdown is rendered.
 
