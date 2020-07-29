@@ -29,6 +29,7 @@ Whenever a specific circle is clicked on in the D3.js visualization, markdown in
 Followed tutorial here: https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71
 ### 3. Blur Nodes that are Descendants of Immediate Children
 To make the user experience better, I blur all nodes that are not the immediate children of the root node. This way the user can focus on all the information directly under the hierarchy of the root node. To do so, I use svg gaussian blur filter: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur
+Tutorial followed: https://stackoverflow.com/questions/35745042/how-to-blur-an-image-on-mouseover-using-d3
 ### 4. Dynamically Size Text
 The name descriptions of each node of the circlemap are dynamically sized based on how big their circle is.
 Referred to this demo: https://bl.ocks.org/mbostock/1846692
