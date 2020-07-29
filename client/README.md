@@ -8,7 +8,15 @@ The frontend of this website mostly consists of a D3.js interactive visualizatio
 `yarn start` should run app in development mode. Upon save, changes are automatically reloaded.
 Expect website to be loaded at [http://localhost:3000](http://localhost:3000).
 
-The website by default works with the static markdown files already deployed. To work with the static markdown files on your local machine, go into `/src/api_calls/api_kmap.js` to change the URL which you request static markdown files from. You may change it to a localhost static file server that you create.
+The website by default works with the static markdown files already deployed. To work with the static markdown files on your local machine, go into `/src/api_calls/api_kmap.js` to change the URL which you request static markdown files from.
+```
+const instance = axios.create({
+  baseURL: "https://ds-knowledge-map.now.sh"
+  // baseURL: "http://127.0.0.1:8080"
+});
+```
+You may change it to a localhost static file server that you create.
+
 
 ## Deployment
 Frontend and backend are deployed at the same time with one command. See root directory README for deployment instructions.
