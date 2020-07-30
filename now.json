@@ -1,11 +1,7 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@now/python",
-      "config": { "excludeFiles": "**/*.js" }
-    },
+    
 
     { 
       "src": "kmap_static/**",

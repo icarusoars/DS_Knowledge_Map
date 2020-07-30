@@ -45,7 +45,7 @@ class About extends React.Component {
         </p>
         <ul>
           <li>
-            Make a pull request to a markdown files on github:
+            Make a pull request to the markdown files on github:
             <br />
             <a href="https://github.com/icarusoars/DS_Knowledge_Map/tree/master/kmap_static/data_science">
               https://github.com/icarusoars/DS_Knowledge_Map/tree/master/kmap_static/data_science
@@ -73,7 +73,7 @@ class About extends React.Component {
           of this Data Science Knowledge Map. These are people who have helped me 
           grow as a professional and student.
         </p>
-        
+
       </div>
     );
   }
