@@ -35,7 +35,7 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
   // create a gaussian blur filter
   var filter = svg.append("defs")
       .append("filter")
-      .attr("id", "blur")
+      .attr("id", "textblur")
       .append("feGaussianBlur")
       .attr("stdDeviation", 2);
 
@@ -150,6 +150,7 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
   // click blank space of svg, zoom back to root node
   svg.on("click", function () {
     zoom(root);
+    onCircleClick(circlemapJSON["md_file_path"]);
   });
   
   // initial zoomto root node
