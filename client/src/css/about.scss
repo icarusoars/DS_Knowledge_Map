@@ -1,0 +1,46 @@
+#AboutPage {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 88%;
+    top: 8%;
+    left: 25%;
+  
+    padding-top: 1em;
+    padding-bottom: 1em;
+  
+    overflow-y: scroll;
+  
+    color: white;
+  
+    font-size: 1.4em;
+  
+    * {
+      color: white;
+    }
+  
+  
+  
+    &::-webkit-scrollbar {
+      width: 0.7em;
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(134, 194, 50, 0.5);
+      border-radius: 30px;
+    }
+
+    h1 {
+      text-decoration: underline;
+    }
+
+    #AboutAuthor {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    a {
+      color: rgba(134, 194, 50, 0.9);
+    }
+  }
+  
