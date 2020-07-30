@@ -4,7 +4,7 @@
 
 .node:hover {
   stroke: #000;
-  stroke-width: 1.5px;
+  stroke-width: 3px;
 }
 
 .node--leaf {
@@ -13,7 +13,7 @@
 
 .node--leaf:hover {
   stroke: #000;
-  stroke-width: 1.5px;
+  stroke-width: 3px;
 }
 
 .label {
@@ -21,12 +21,12 @@
   text-anchor: middle;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
   overflow-wrap: break-word;
+  font-family: "Lato", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  backdrop-filter: blur(6px);
 }
 
-/* .label,
-.node--root {
-  pointer-events: none;
-} */
 .label {
   pointer-events: none;
 }
