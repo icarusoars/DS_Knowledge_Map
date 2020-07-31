@@ -4,7 +4,7 @@ name: Data Science
 
 <iframe src="https://giphy.com/embed/Wj7lNjMNDxSmc" width="480" height="349" frameBorder="0"></iframe>
 
-<span>Hi!</span> Thanks for visiting this website. This website is here to visualize the many different facets of Data Science, a term that many deem beautiful yet vague at the same time. Data Science is so vast, that often times the trickiest part of learning Data Science is figuring out how to begin or what to put into your Data Science toolbox.
+<span>Hi!</span> Welcome to Data Science Knowledge Map. Data Science has grown as a subject field to include many subfields. Data Science is so vast, that often times the trickiest part of learning Data Science is figuring out how to begin or what to put into your Data Science toolbox.
 
 Hopefully with this website as a resource, you may be more intentional in learning Data Science. It wants to help you:
 - figure out what to learn
