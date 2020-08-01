@@ -48,11 +48,13 @@ img {
 }
 
 iframe {
-  display: block;
+  display: inline-block;
   width: 100%;
+  height: auto;
+  // height: 40%;
   margin: 0 auto;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
   pointer-events: none;
 }
 

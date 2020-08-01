@@ -5,25 +5,21 @@ import "../css/KnowledgeMap.scss";
 
 
 class KnowledgeMapLabel extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      label: "",
-    };
-  }
 
   render() {
     return (
       <div id = 'KnowledgeMapLabel'>
+        <div id = 'KnowledgeMapLabelInside'>
+            {this.props.currentCircleLabel}
+        </div>
       </div>
     );
   }
 }
 
 
-KnowledgeMapInfo.propTypes = {
-  currentCircleInfoPath: PropTypes.string,
+KnowledgeMapLabel.propTypes = {
+  currentCircleLabel: PropTypes.string,
 };
 
-export default KnowledgeMapInfo;
+export default KnowledgeMapLabel;

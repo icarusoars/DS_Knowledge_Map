@@ -17,13 +17,35 @@
 }
 
 /* Right side of screen, display information */
+#KnowledgeMapLabel {
+
+  height: 10%;
+  padding-bottom: 2vh;
+  padding-left: 1em;
+
+  #KnowledgeMapLabelInside {
+    display: inline-block;
+    background-color: rgba(134, 194, 50, 0.9);
+    
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+
+    border-radius: 5%;
+
+    // color:
+
+    font-weight: bold;
+    font-size: 1.7em;
+  }
+}
+
 #KnowledgeMapInfo {
   #KnowledgeMapInfoInside {
     display: block;
     position: absolute;
 
     width: 97.5%;
-    height: 100%;
+    height: 90%;
     left: 2.5%;
     padding: 1.5em;
 

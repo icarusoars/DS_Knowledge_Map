@@ -29,7 +29,9 @@ class KnowledgeMapInfo extends React.Component {
   }
 
   getMarkdown = async () => {
-    const circleMd = await getCircleInfo(this.props.currentCircleInfoPath);
+    var circleMd = await getCircleInfo(this.props.currentCircleInfoPath);
+    circleMd = circleMd.split("---")[2]
+    // throwaway metadata information
     this.setState(() => ({
       markdown: circleMd
     }));
@@ -38,7 +40,6 @@ class KnowledgeMapInfo extends React.Component {
   render() {
     return (
       <div id = 'KnowledgeMapInfoInside'>
-        <h3>{this.props.currentCircleInfoPath}</h3>
         <Markdown source={this.state.markdown} 
         escapeHtml={false}/>
       </div>

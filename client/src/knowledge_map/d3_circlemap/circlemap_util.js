@@ -33,11 +33,12 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
     );
 
   // create a gaussian blur filter
-  var filter = svg.append("defs")
-      .append("filter")
-      .attr("id", "textblur")
-      .append("feGaussianBlur")
-      .attr("stdDeviation", 2);
+  var filter = svg
+    .append("defs")
+    .append("filter")
+    .attr("id", "textblur")
+    .append("feGaussianBlur")
+    .attr("stdDeviation", 2);
 
   // create circle packing fucntion
   // this function will be used to pack each node in the diagram
@@ -58,8 +59,8 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
 
   // get all descendants of root
   var focus = root,
-      nodes = pack(root).descendants(),
-      view;
+    nodes = pack(root).descendants(),
+    view;
 
   // draw circles for each descendant
   var circle = g
@@ -78,9 +79,9 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
     .style("fill", function (d) {
       return d.children ? color(d.depth) : LEAFNODECOLOR;
     })
-    .attr("id", function(d) {
+    .attr("id", function (d) {
       var file_path = d["data"]["md_file_path"];
-      file_path = file_path.replace(/\//g, '_').replace(/\./g, '_');
+      file_path = file_path.replace(/\//g, "_").replace(/\./g, "_");
       return file_path;
     })
     .on("click", function (d) {
@@ -88,31 +89,30 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
       if (focus !== d) {
         if (!d.children) {
           zoom(d.parent); //zoom function changes global variable focus to d that is clicked
-        } else{
+        } else {
           zoom(d); //zoom function changes global variable focus to d that is clicked
         }
-        
+
         d3.event.stopPropagation();
       }
       // React eventHandler for when circle is clicked:
       // if click on same circle twice, return to root Data_Science circle
       if (d["depth"] === 0 || prezoomfocus === d) {
-        onCircleClick(circlemapJSON["md_file_path"]);
+        onCircleClick(circlemapJSON["md_file_path"], circlemapJSON["name"]);
       } else {
-        onCircleClick(d["data"]["md_file_path"]);
+        onCircleClick(d["data"]["md_file_path"], d["data"]["name"]);
       }
-    })
-    // .on("mouseover",function(){
-    //   d3.select(this).attr("filter", null);
-    // })
-    // .on("mouseout",function(){
-    //   d3.select(this).attr("filter", "url(#blur)");
-    // });
+    });
+  // .on("mouseover",function(){
+  //   d3.select(this).attr("filter", null);
+  // })
+  // .on("mouseout",function(){
+  //   d3.select(this).attr("filter", "url(#blur)");
+  // });
 
-  circle.append("svg:title")
-  .text(function(d) {
+  circle.append("svg:title").text(function (d) {
     return d.name;
-  })
+  });
 
   // label circle with text for each descendant
   var text = g
@@ -121,9 +121,9 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
     .enter()
     .append("text")
     .attr("class", "label")
-    .attr("id", function(d) {
+    .attr("id", function (d) {
       var file_path = d["data"]["md_file_path"];
-      file_path = file_path.replace(/\//g, '_').replace(/\./g, '_');
+      file_path = file_path.replace(/\//g, "_").replace(/\./g, "_");
       return file_path;
     })
     .style("fill-opacity", function (d) {
@@ -137,31 +137,32 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
     // each word is on its own line to make words as big as possible
     // use tspan within svg text to create newlines
     .selectAll("tspan")
-    .data(d => d.data.name.split(/(?=[A-Z][^A-Z])/g))
+    .data((d) => d.data.name.split(/(?=[A-Z][^A-Z])/g))
     .join("tspan")
-      .attr("x", 0)
-      .attr("y", (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
-      .text(d => d);
-  
-  
+    .attr("x", 0)
+    .attr("y", (d, i, nodes) => `${i - nodes.length / 2 + 0.8}em`)
+    .text((d) => d);
+
   // select all the nodes
   var node = g.selectAll("circle,text");
 
   // click blank space of svg, zoom back to root node
   svg.on("click", function () {
     zoom(root);
-    onCircleClick(circlemapJSON["md_file_path"]);
+    onCircleClick(circlemapJSON["md_file_path"], circlemapJSON["name"]);
   });
-  
+
   // initial zoomto root node
   zoomTo([root.x, root.y, root.r * 2 + margin]);
 
   // initial set text fonts to correct size
-  setTimeout(function() {
-    d3.selectAll("text").filter(function(d) {
-      return d.parent === focus || this.style.display === "inline-block";
-    }).style("font-size", calculateTextFontSize);
-  }, 500)
+  setTimeout(function () {
+    d3.selectAll("text")
+      .filter(function (d) {
+        return d.parent === focus || this.style.display === "inline-block";
+      })
+      .style("font-size", calculateTextFontSize);
+  }, 500);
 
   // zoom to a new node d
   function zoom(d) {
@@ -197,11 +198,13 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
       .on("end", function (d) {
         if (d.parent !== focus) this.style.display = "none";
       });
-      setTimeout(function() {
-        d3.selectAll("text").filter(function(d) {
+    setTimeout(function () {
+      d3.selectAll("text")
+        .filter(function (d) {
           return d.parent === focus || this.style.display === "inline-block";
-        }).style("font-size", calculateTextFontSize);
-      }, 500)
+        })
+        .style("font-size", calculateTextFontSize);
+    }, 500);
   }
 
   // helper function to make zooming to new node smooth
@@ -217,25 +220,25 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
   }
 
   // returns the font size for text labels such that they fill entire circle
-  var calculateTextFontSize = function(d) {
-    var id = d3.select(this).attr('id');
+  var calculateTextFontSize = function (d) {
+    var id = d3.select(this).attr("id");
     var radius = 0;
-    if (d.fontsize){
+    if (d.fontsize) {
       //if fontsize is already calculated use that.
       return d.fontsize;
     }
-    if (!d.computed ) {
+    if (!d.computed) {
       //if computed not present, compute text length of longest tspan
       var tspans = this.children;
-      d.computed = 0
+      d.computed = 0;
       for (var i = 0; i < tspans.length; i++) {
         var tspanLength = tspans[i].getComputedTextLength();
         if (tspanLength > d.computed) {
-          d.computed = tspanLength
+          d.computed = tspanLength;
         }
       }
       // d.computed = this.getComputedTextLength();
-      if(d.computed != 0){
+      if (d.computed != 0) {
         //if computed is not 0 then get the visual radius of DOM
         var r = d3.selectAll("#" + id).attr("r");
         //if radius present in DOM use that
@@ -243,11 +246,11 @@ function createCircleMapUtil(circlemapJSON, svg_node, onCircleClick) {
           radius = r;
         }
         //calculate the font size and store it in object for future
-        d.fontsize = (2 * radius - 8) / d.computed * 12 + "px";
-        return d.fontsize;  
+        d.fontsize = ((2 * radius - 8) / d.computed) * 12 + "px";
+        return d.fontsize;
       }
     }
-  }
+  };
 }
 
 export { createCircleMapUtil };
