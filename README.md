@@ -3,6 +3,8 @@
 Website located here: \
 https://ds-knowledge-map.now.sh/
 
+![website preview](website_preview.png)
+
 The motivation for this product can be read on the website.
 
 This repo is a mono-repo where both the frontend and backend are included.
